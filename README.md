@@ -1,4 +1,4 @@
-# Avantica Test
+# Multiplica Test
 ## Pregunta 1
 Crear una función que reciba 2 parámetros, los cuales serán requeridos (no deben ser undefined). Si falta alguno de los parámetros, se debe lanzar un mensaje de error.
 
