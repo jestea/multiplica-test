@@ -1,0 +1,17 @@
+.list-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+@media (min-width: 200px) {
+  .list-items {
+    justify-content: center;
+  }
+}
+@media (min-width: 500px) {
+  .list-items {
+    justify-content: space-between;
+  }
+}

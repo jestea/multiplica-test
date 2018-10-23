@@ -1,0 +1,14 @@
+<article class="card col-sm-12 m-10 m-t-0">
+  <h3 class="card-title">
+    {{ item.name }}
+  </h3>
+  <div class="card-content">
+    <p>
+      {{ item.description }}
+    </p>
+  </div>
+  <div class="card-footer">
+    <button class="btn" (click)="this.customerService.populateForm(item)">Editar</button>
+    <button class="btn" (click)="onDelete(item.$key)">Eliminar</button>
+  </div>
+</article>
