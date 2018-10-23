@@ -1,0 +1,29 @@
+.navbar {
+  background: rgb(243, 243, 243);
+  padding: 0;
+  margin: 0;
+}
+.navbar-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 90%;
+  margin: auto;
+  padding: 10px 0;
+}
+
+@media screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px) {
+    .navbar-items {
+      justify-content: center;
+    }
+}
+@media screen
+  and (min-device-width: 1200px)
+  and (max-device-width: 1600px) {
+    .navbar-items {
+      justify-content: flex-start;
+    }
+}
+

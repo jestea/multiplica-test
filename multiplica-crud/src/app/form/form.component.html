@@ -1,0 +1,28 @@
+<article class="card card-big col-sm-12">
+  <form [formGroup]="this.customerService.form" (ngSubmit)="onSubmit()">
+    <input type="hidden" formControlName="$key">
+    <h3 class="card-title">Servicios</h3>
+    <div class="card-content">
+      <div class="form-control">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="name" formControlName="name">
+        <small *ngIf="submitted && formControls.name.errors" class="error-message">
+          * Este campo es requerido
+        </small>
+      </div>
+      <div class="form-control">
+        <label for="description">Descripción</label>
+        <input type="text" id="description" name="description" [ngClass]="{'is-invalid': submitted && formControls.description.errors}" formControlName="description">
+        <small *ngIf="submitted && formControls.description.errors" class="error-message">
+          * Este campo es requerido
+        </small>
+      </div>
+    </div>
+    <div class="card-footer">
+      <div class="row">
+        <button class="btn btn-success" type="submit">{{ this.customerService.form.get('$key').value === null ? 'Guardar' : 'Editar' }}</button>
+        <button class="btn btn-error" (click)="onCancel()">Cancelar</button>
+      </div>
+    </div>
+  </form>
+</article>
